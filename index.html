@@ -3,15 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraFlix</title>
+    <title>FlyNow - Passagens Aéreas</title>
 </head>
 <body>
-    <h1>AluraFlix</h1>
-    <p>
-        Site de filmes <strong>ONLINE</strong> totalmente 
-        <em>legalizado</em>e nada duvidoso 
-    </p>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/fbS0efVvkVU?si=b-cmjHxJr0xlN_Po" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Cabeçalho e Navegação -->
+    <header>
+        <h1>FlyNow</h1>
+        <nav>
+            <ul>
+                <li><a href="#buscar">Buscar Voos</a></li>
+                <li><a href="#destaques">Ofertas</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Seção Principal: Busca de Voos -->
+    <main>
+        <section id="buscar">
+            <h2>Encontre sua próxima viagem</h2>
+            <form action="#" method="GET">
+                <fieldset>
+                    <legend>Tipo de Viagem</legend>
+                    <input type="radio" id="ida-volta" name="tipo-viagem" value="ida-volta" checked>
+                    <label for="ida-volta">Ida e Volta</label>
+                    
+                    <input type="radio" id="somente-ida" name="tipo-viagem" value="somente-ida">
+                    <label for="somente-ida">Somente Ida</label>
+                </fieldset>
+
+                <br>
+
+                <div>
+                    <label for="origem">Origem:</label>
+                    <input type="text" id="origem" name="origem" placeholder="Ex: São Paulo (GRU)" required>
+
+                    <label for="destino">Destino:</label>
+                    <input type="text" id="destino" name="destino" placeholder="Ex: Rio de Janeiro (GIG)" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="data-ida">Data de Ida:</label>
+                    <input type="date" id="data-ida" name="data-ida" required>
+
+                    <label for="data-volta">Data de Volta:</label>
+                    <input type="date" id="data-volta" name="data-volta">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="passageiros">Passageiros:</label>
+                    <select id="passageiros" name="passageiros">
+                        <option value="1">1 Adulto</option>
+                        <option value="2">2 Adultos</option>
+                        <option value="3">3 Adultos</option>
+                        <option value="4">4+ Adultos</option>
+                    </select>
+
+                    <label for="classe">Classe:</label>
+                    <select id="classe" name="classe">
+                        <option value="economica">Econômica</option>
+                        <option value="executiva">Executiva</option>
+                        <option value="primeira">Primeira Classe</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <button type="submit">Pesquisar Voos</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Seção de Ofertas em Destaque -->
+        <section id="destaques">
+            <h2>Destinos em Destaque</h2>
+            
+            <article>
+                <h3>São Paulo &rarr; Rio de Janeiro</h3>
+                <p>A partir de <strong>R$ 299,00</strong> (ida e volta)</p>
+                <p>Aproveite os finais de semana na Cidade Maravilhosa com preços imperdíveis.</p>
+                <button type="button">Garantir Passagem</button>
+            </article>
+
+            <br>
+
+            <article>
+                <h3>Brasília &rarr; Salvador</h3>
+                <p>A partir de <strong>R$ 450,00</strong> (ida e volta)</p>
+                <p>Conheça a história e as praias incríveis do Nordeste.</p>
+                <button type="button">Garantir Passagem</button>
+            </article>
+
+            <br>
+
+            <article>
+                <h3>Curitiba &rarr; Florianópolis</h3>
+                <p>A partir de <strong>R$ 210,00</strong> (ida e volta)</p>
+                <p>Voos rápidos com as melhores opções de horários.</p>
+                <button type="button">Garantir Passagem</button>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Seção Sobre Nós -->
+        <section id="sobre">
+            <h2>Sobre a FlyNow</h2>
+            <p>A <strong>FlyNow</strong> é uma plataforma dedicada a conectar você aos melhores destinos do mundo com conforto, segurança e o menor preço garantido.</p>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- Rodapé do Site -->
+    <footer id="contato">
+        <p>&copy; 2026 FlyNow Passagens Aéreas. Todos os direitos reservados.</p>
+        <p>Contato: atendimento@flynow.com.br | Tel: (11) 4000-0000</p>
+    </footer>
+
 </body>
 </html>
